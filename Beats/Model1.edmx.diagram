@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="af001cde253245bc82dd2a9d2e6b0da6" Name="Diagram1">
+        <EntityTypeShape EntityType="BeatsModel.admin" Width="1.5" PointX="3.75" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.canremove" Width="1.5" PointX="6" PointY="21.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.channel" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.correlation" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.genre" Width="1.5" PointX="3.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.history" Width="1.5" PointX="6" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.song" Width="1.5" PointX="3.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.song_add" Width="1.5" PointX="6" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.songgenre" Width="1.5" PointX="6" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.trailer" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.upload" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.user" Width="1.5" PointX="0.75" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.usercreatedchannel" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BeatsModel.userfollowschannel" Width="1.5" PointX="3" PointY="9.875" IsExpanded="true" />
+        <AssociationConnector Association="BeatsModel.FK_canremove_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_song_add_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_upload_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_usercreatedchannel_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_userfollowschannel_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_correlation_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_correlation_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_songgenre_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_history_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_history_ToTable_1" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_song_add_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_songgenre_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_upload_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_usercreatedchannel_ToTable" ManuallyRouted="false" />
+        <AssociationConnector Association="BeatsModel.FK_userfollowschannel_ToTable" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

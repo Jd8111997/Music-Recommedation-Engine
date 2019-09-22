@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BeatsModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="admin_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="20" Nullable="false" />
+    <Property Name="username" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="canremove">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="admin_id" Type="int" Nullable="false" />
+    <Property Name="user_name" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="time" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="channel">
+    <Key>
+      <PropertyRef Name="channel_id" />
+    </Key>
+    <Property Name="channel_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="channel_name" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="channel_description" Type="nchar" MaxLength="60" Nullable="false" />
+    <Property Name="follow" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="correlation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user1" Type="int" Nullable="false" />
+    <Property Name="user2" Type="int" Nullable="false" />
+    <Property Name="factor" Type="float" Nullable="false" />
+  </EntityType>
+  <EntityType Name="genre">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="name" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="history">
+    <Key>
+      <PropertyRef Name="h_id" />
+    </Key>
+    <Property Name="h_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="user_id" Type="int" Nullable="false" />
+    <Property Name="ratings" Type="int" />
+    <Property Name="song_id" Type="int" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+    <Property Name="time" Type="datetime2" Precision="7" Nullable="false" />
+  </EntityType>
+  <EntityType Name="song">
+    <Key>
+      <PropertyRef Name="song_id" />
+    </Key>
+    <Property Name="song_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="track" Type="nchar" MaxLength="35" Nullable="false" />
+    <Property Name="artist" Type="nchar" MaxLength="25" Nullable="false" />
+    <Property Name="album" Type="nchar" MaxLength="25" Nullable="false" />
+    <Property Name="duration" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="song_rating" Type="float" Nullable="false" />
+    <Property Name="count" Type="int" Nullable="false" />
+    <Property Name="counttoday" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="song_add">
+    <Key>
+      <PropertyRef Name="song_id" />
+      <PropertyRef Name="admin_id" />
+    </Key>
+    <Property Name="song_id" Type="int" Nullable="false" />
+    <Property Name="admin_id" Type="int" Nullable="false" />
+    <Property Name="upload_time" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="path" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="songgenre">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="song_id" Type="int" Nullable="false" />
+    <Property Name="genre_id" Type="int" Nullable="false" />
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="trailer">
+    <Key>
+      <PropertyRef Name="trailer_id" />
+    </Key>
+    <Property Name="trailer_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="title" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="upload">
+    <Key>
+      <PropertyRef Name="trailer_id" />
+      <PropertyRef Name="channel_id" />
+    </Key>
+    <Property Name="trailer_id" Type="int" Nullable="false" />
+    <Property Name="channel_id" Type="int" Nullable="false" />
+    <Property Name="upload_time" Type="datetime2" Precision="7" Nullable="false" />
+    <Property Name="path" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="username" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="password" Type="nchar" MaxLength="15" Nullable="false" />
+    <Property Name="security_ques" Type="nchar" MaxLength="30" Nullable="false" />
+    <Property Name="security_ans" Type="nchar" MaxLength="30" Nullable="false" />
+  </EntityType>
+  <EntityType Name="usercreatedchannel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="channelid" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="userfollowschannel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userid" Type="int" Nullable="false" />
+    <Property Name="channelid" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_canremove_ToTable_1">
+    <End Role="admin" Type="Self.admin" Multiplicity="1" />
+    <End Role="canremove" Type="Self.canremove" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="admin">
+        <PropertyRef Name="admin_id" />
+      </Principal>
+      <Dependent Role="canremove">
+        <PropertyRef Name="admin_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_correlation_ToTable">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="correlation" Type="Self.correlation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="correlation">
+        <PropertyRef Name="user1" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_correlation_ToTable_1">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="correlation" Type="Self.correlation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="correlation">
+        <PropertyRef Name="user2" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_history_ToTable">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="history" Type="Self.history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="history">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_history_ToTable_1">
+    <End Role="song" Type="Self.song" Multiplicity="1" />
+    <End Role="history" Type="Self.history" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="song">
+        <PropertyRef Name="song_id" />
+      </Principal>
+      <Dependent Role="history">
+        <PropertyRef Name="song_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_song_add_ToTable">
+    <End Role="song" Type="Self.song" Multiplicity="1" />
+    <End Role="song_add" Type="Self.song_add" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="song">
+        <PropertyRef Name="song_id" />
+      </Principal>
+      <Dependent Role="song_add">
+        <PropertyRef Name="song_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_song_add_ToTable_1">
+    <End Role="admin" Type="Self.admin" Multiplicity="1" />
+    <End Role="song_add" Type="Self.song_add" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="admin">
+        <PropertyRef Name="admin_id" />
+      </Principal>
+      <Dependent Role="song_add">
+        <PropertyRef Name="admin_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_songgenre_ToTable">
+    <End Role="song" Type="Self.song" Multiplicity="1" />
+    <End Role="songgenre" Type="Self.songgenre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="song">
+        <PropertyRef Name="song_id" />
+      </Principal>
+      <Dependent Role="songgenre">
+        <PropertyRef Name="song_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_songgenre_ToTable_1">
+    <End Role="genre" Type="Self.genre" Multiplicity="1" />
+    <End Role="songgenre" Type="Self.songgenre" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="genre">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="songgenre">
+        <PropertyRef Name="genre_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_upload_ToTable">
+    <End Role="trailer" Type="Self.trailer" Multiplicity="1" />
+    <End Role="upload" Type="Self.upload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="trailer">
+        <PropertyRef Name="trailer_id" />
+      </Principal>
+      <Dependent Role="upload">
+        <PropertyRef Name="trailer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_upload_ToTable_1">
+    <End Role="channel" Type="Self.channel" Multiplicity="1" />
+    <End Role="upload" Type="Self.upload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="channel">
+        <PropertyRef Name="channel_id" />
+      </Principal>
+      <Dependent Role="upload">
+        <PropertyRef Name="channel_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usercreatedchannel_ToTable">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="usercreatedchannel" Type="Self.usercreatedchannel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="usercreatedchannel">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_usercreatedchannel_ToTable_1">
+    <End Role="channel" Type="Self.channel" Multiplicity="1" />
+    <End Role="usercreatedchannel" Type="Self.usercreatedchannel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="channel">
+        <PropertyRef Name="channel_id" />
+      </Principal>
+      <Dependent Role="usercreatedchannel">
+        <PropertyRef Name="channelid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userfollowschannel_ToTable">
+    <End Role="user" Type="Self.user" Multiplicity="1" />
+    <End Role="userfollowschannel" Type="Self.userfollowschannel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="userfollowschannel">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_userfollowschannel_ToTable_1">
+    <End Role="channel" Type="Self.channel" Multiplicity="1" />
+    <End Role="userfollowschannel" Type="Self.userfollowschannel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="channel">
+        <PropertyRef Name="channel_id" />
+      </Principal>
+      <Dependent Role="userfollowschannel">
+        <PropertyRef Name="channelid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BeatsModelStoreContainer">
+    <EntitySet Name="admin" EntityType="Self.admin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="canremove" EntityType="Self.canremove" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="channel" EntityType="Self.channel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="correlation" EntityType="Self.correlation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="genre" EntityType="Self.genre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="history" EntityType="Self.history" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="song" EntityType="Self.song" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="song_add" EntityType="Self.song_add" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="songgenre" EntityType="Self.songgenre" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="trailer" EntityType="Self.trailer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="upload" EntityType="Self.upload" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="user" EntityType="Self.user" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="usercreatedchannel" EntityType="Self.usercreatedchannel" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="userfollowschannel" EntityType="Self.userfollowschannel" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_canremove_ToTable_1" Association="Self.FK_canremove_ToTable_1">
+      <End Role="admin" EntitySet="admin" />
+      <End Role="canremove" EntitySet="canremove" />
+    </AssociationSet>
+    <AssociationSet Name="FK_correlation_ToTable" Association="Self.FK_correlation_ToTable">
+      <End Role="user" EntitySet="user" />
+      <End Role="correlation" EntitySet="correlation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_correlation_ToTable_1" Association="Self.FK_correlation_ToTable_1">
+      <End Role="user" EntitySet="user" />
+      <End Role="correlation" EntitySet="correlation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_history_ToTable" Association="Self.FK_history_ToTable">
+      <End Role="user" EntitySet="user" />
+      <End Role="history" EntitySet="history" />
+    </AssociationSet>
+    <AssociationSet Name="FK_history_ToTable_1" Association="Self.FK_history_ToTable_1">
+      <End Role="song" EntitySet="song" />
+      <End Role="history" EntitySet="history" />
+    </AssociationSet>
+    <AssociationSet Name="FK_song_add_ToTable" Association="Self.FK_song_add_ToTable">
+      <End Role="song" EntitySet="song" />
+      <End Role="song_add" EntitySet="song_add" />
+    </AssociationSet>
+    <AssociationSet Name="FK_song_add_ToTable_1" Association="Self.FK_song_add_ToTable_1">
+      <End Role="admin" EntitySet="admin" />
+      <End Role="song_add" EntitySet="song_add" />
+    </AssociationSet>
+    <AssociationSet Name="FK_songgenre_ToTable" Association="Self.FK_songgenre_ToTable">
+      <End Role="song" EntitySet="song" />
+      <End Role="songgenre" EntitySet="songgenre" />
+    </AssociationSet>
+    <AssociationSet Name="FK_songgenre_ToTable_1" Association="Self.FK_songgenre_ToTable_1">
+      <End Role="genre" EntitySet="genre" />
+      <End Role="songgenre" EntitySet="songgenre" />
+    </AssociationSet>
+    <AssociationSet Name="FK_upload_ToTable" Association="Self.FK_upload_ToTable">
+      <End Role="trailer" EntitySet="trailer" />
+      <End Role="upload" EntitySet="upload" />
+    </AssociationSet>
+    <AssociationSet Name="FK_upload_ToTable_1" Association="Self.FK_upload_ToTable_1">
+      <End Role="channel" EntitySet="channel" />
+      <End Role="upload" EntitySet="upload" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usercreatedchannel_ToTable" Association="Self.FK_usercreatedchannel_ToTable">
+      <End Role="user" EntitySet="user" />
+      <End Role="usercreatedchannel" EntitySet="usercreatedchannel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_usercreatedchannel_ToTable_1" Association="Self.FK_usercreatedchannel_ToTable_1">
+      <End Role="channel" EntitySet="channel" />
+      <End Role="usercreatedchannel" EntitySet="usercreatedchannel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userfollowschannel_ToTable" Association="Self.FK_userfollowschannel_ToTable">
+      <End Role="user" EntitySet="user" />
+      <End Role="userfollowschannel" EntitySet="userfollowschannel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_userfollowschannel_ToTable_1" Association="Self.FK_userfollowschannel_ToTable_1">
+      <End Role="channel" EntitySet="channel" />
+      <End Role="userfollowschannel" EntitySet="userfollowschannel" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

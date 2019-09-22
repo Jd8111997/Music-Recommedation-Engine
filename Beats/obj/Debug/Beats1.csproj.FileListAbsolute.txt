@@ -1,0 +1,64 @@
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\csc.exe
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\vbc.exe
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\VBCSCompiler.exe
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\Beats1.dll.config
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\Beats1.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\Beats1.pdb
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\obj\Debug\Beats1.csprojResolveAssemblyReference.cache
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\obj\Debug\Beats1.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\obj\Debug\Beats1.pdb
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\EntityFramework.dll
+C:\Users\Kartik\documents\visual studio 2015\Projects\Beats1\Beats1\bin\EntityFramework.xml
+C:\Users\Kartik\Desktop\Beats1\Beats1\obj\Debug\Beats1.csprojResolveAssemblyReference.cache
+C:\Users\Kartik\Desktop\Beats1\Beats1\obj\Debug\Beats1.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\obj\Debug\Beats1.pdb
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\csc.exe
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\vbc.exe
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\VBCSCompiler.exe
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\Beats1.dll.config
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\Beats1.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\Beats1.pdb
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\EntityFramework.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\EntityFramework.xml
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\AjaxControlToolkit.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\AjaxControlToolkit.pdb
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\ar\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\cs\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\de\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\es\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\fr\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\he\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\hi\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\it\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\ja\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\ko\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\nl\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\pt\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\ru\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\tr-TR\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\zh-CHS\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\zh-CHT\AjaxControlToolkit.resources.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\MathNet.Numerics.dll
+C:\Users\Kartik\Desktop\Beats1\Beats1\bin\MathNet.Numerics.xml

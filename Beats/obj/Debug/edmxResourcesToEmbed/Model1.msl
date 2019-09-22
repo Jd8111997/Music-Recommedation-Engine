@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BeatsModelStoreContainer" CdmEntityContainer="BeatsEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="BeatsModel.admin">
+        <MappingFragment StoreEntitySet="admin">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="username" ColumnName="username" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="canremoves">
+      <EntityTypeMapping TypeName="BeatsModel.canremove">
+        <MappingFragment StoreEntitySet="canremove">
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="channels">
+      <EntityTypeMapping TypeName="BeatsModel.channel">
+        <MappingFragment StoreEntitySet="channel">
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+          <ScalarProperty Name="channel_name" ColumnName="channel_name" />
+          <ScalarProperty Name="channel_description" ColumnName="channel_description" />
+          <ScalarProperty Name="follow" ColumnName="follow" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="correlations">
+      <EntityTypeMapping TypeName="BeatsModel.correlation">
+        <MappingFragment StoreEntitySet="correlation">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="user1" ColumnName="user1" />
+          <ScalarProperty Name="user2" ColumnName="user2" />
+          <ScalarProperty Name="factor" ColumnName="factor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="genres">
+      <EntityTypeMapping TypeName="BeatsModel.genre">
+        <MappingFragment StoreEntitySet="genre">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="histories">
+      <EntityTypeMapping TypeName="BeatsModel.history">
+        <MappingFragment StoreEntitySet="history">
+          <ScalarProperty Name="h_id" ColumnName="h_id" />
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="ratings" ColumnName="ratings" />
+          <ScalarProperty Name="song_id" ColumnName="song_id" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="time" ColumnName="time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="songs">
+      <EntityTypeMapping TypeName="BeatsModel.song">
+        <MappingFragment StoreEntitySet="song">
+          <ScalarProperty Name="song_id" ColumnName="song_id" />
+          <ScalarProperty Name="track" ColumnName="track" />
+          <ScalarProperty Name="artist" ColumnName="artist" />
+          <ScalarProperty Name="album" ColumnName="album" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="song_rating" ColumnName="song_rating" />
+          <ScalarProperty Name="count" ColumnName="count" />
+          <ScalarProperty Name="counttoday" ColumnName="counttoday" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="song_add">
+      <EntityTypeMapping TypeName="BeatsModel.song_add">
+        <MappingFragment StoreEntitySet="song_add">
+          <ScalarProperty Name="song_id" ColumnName="song_id" />
+          <ScalarProperty Name="admin_id" ColumnName="admin_id" />
+          <ScalarProperty Name="upload_time" ColumnName="upload_time" />
+          <ScalarProperty Name="path" ColumnName="path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="songgenres">
+      <EntityTypeMapping TypeName="BeatsModel.songgenre">
+        <MappingFragment StoreEntitySet="songgenre">
+          <ScalarProperty Name="song_id" ColumnName="song_id" />
+          <ScalarProperty Name="genre_id" ColumnName="genre_id" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="trailers">
+      <EntityTypeMapping TypeName="BeatsModel.trailer">
+        <MappingFragment StoreEntitySet="trailer">
+          <ScalarProperty Name="trailer_id" ColumnName="trailer_id" />
+          <ScalarProperty Name="title" ColumnName="title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="uploads">
+      <EntityTypeMapping TypeName="BeatsModel.upload">
+        <MappingFragment StoreEntitySet="upload">
+          <ScalarProperty Name="trailer_id" ColumnName="trailer_id" />
+          <ScalarProperty Name="channel_id" ColumnName="channel_id" />
+          <ScalarProperty Name="upload_time" ColumnName="upload_time" />
+          <ScalarProperty Name="path" ColumnName="path" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="BeatsModel.user">
+        <MappingFragment StoreEntitySet="user">
+          <ScalarProperty Name="user_id" ColumnName="user_id" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="security_ques" ColumnName="security_ques" />
+          <ScalarProperty Name="security_ans" ColumnName="security_ans" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="usercreatedchannels">
+      <EntityTypeMapping TypeName="BeatsModel.usercreatedchannel">
+        <MappingFragment StoreEntitySet="usercreatedchannel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="channelid" ColumnName="channelid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="userfollowschannels">
+      <EntityTypeMapping TypeName="BeatsModel.userfollowschannel">
+        <MappingFragment StoreEntitySet="userfollowschannel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="channelid" ColumnName="channelid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
